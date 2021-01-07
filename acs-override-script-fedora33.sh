@@ -31,9 +31,9 @@ if [ "$MY_KERNEL_VERSION" == "" ]; then
 fi
 echo "Kernel version to be build is ${MY_KERNEL_VERSION}"
 
-#install ‘mockbuild’ user
-sudo yum install mock -y || exit 1
-sudo useradd -s /sbin/nologin mockbuild || exit 1
+# #install ‘mockbuild’ user
+# sudo yum install mock -y || exit 1
+# sudo useradd -s /sbin/nologin mockbuild || exit 1
 
 #1 Add RPM Fusion
 sudo dnf install "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm" -y || exit 1
